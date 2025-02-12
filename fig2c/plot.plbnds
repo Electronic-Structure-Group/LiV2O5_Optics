@@ -1,0 +1,51 @@
+%char0 ltb="1,bold=3,col=0,0,1"
+%char0 ltr="1,bold=3,col=1,0,0"
+fplot
+% var ymin=-4 ymax=4
+ -frme 0,0.078,0,1 -p0 -x 0,1 -y {ymin},{ymax} -noxn -1p -yl "Energy(eV)"
+ -lt 2,bold=3,col=0,0,0,1,.5,.3,.5 -tp 2~0,0,1,0 -lt 1
+ -colsy 2:35 -lt {ltb} -qr bnd1.sp2
+  -colsy 2:35 -lt {ltr} -qr bnd1.sp1
+ -font s24 -lblu 0,{ymin-(ymax-ymin)/60} cd G
+ -frme 0.078,0.202,0,1 -p0 -x 0,1 -y {ymin},{ymax} -noxn -1p -noyn
+ -lt 2,bold=3,col=0,0,0,1,.5,.3,.5 -tp 2~0,0,1,0 -lt 1
+ -colsy 2:35 -lt {ltb} -qr bnd2.sp2
+ -colsy 2:35 -lt {ltr} -qr bnd2.sp1 
+ -font t24 -lblu 0,{ymin-(ymax-ymin)/60} cd X
+ -frme 0.202,0.281,0,1 -p0 -x 0,1 -y {ymin},{ymax} -noxn -1p -noyn
+ -lt 2,bold=3,col=0,0,0,1,.5,.3,.5 -tp 2~0,0,1,0 -lt 1
+ -colsy 2:34 -lt {ltb} -qr bnd3.sp2
+ -colsy 2:34 -lt {ltr} -qr bnd3.sp1
+ -font t24 -lblu 0,{ymin-(ymax-ymin)/60} cd S
+ -frme 0.281,0.405,0,1 -p0 -x 0,1 -y {ymin},{ymax} -noxn -1p -noyn
+ -lt 2,bold=3,col=0,0,0,1,.5,.3,.5 -tp 2~0,0,1,0 -lt 1
+ -colsy 2:33 -lt {ltb} -qr bnd4.sp2
+ -colsy 2:33 -lt {ltr} -qr bnd4.sp1
+ -font t24 -lblu 0,{ymin-(ymax-ymin)/60} cd Y
+ -frme 0.405,0.595,0,1 -p0 -x 0,1 -y {ymin},{ymax} -noxn -1p -noyn
+ -lt 2,bold=3,col=0,0,0,1,.5,.3,.5 -tp 2~0,0,1,0 -lt 1
+ -colsy 2:40 -lt {ltb} -qr bnd5.sp2
+ -colsy 2:40 -lt {ltr} -qr bnd5.sp1
+ -font s24 -lblu 0,{ymin-(ymax-ymin)/60} cd G
+ -frme 0.595,0.673,0,1 -p0 -x 0,1 -y {ymin},{ymax} -noxn -1p -noyn
+ -lt 2,bold=3,col=0,0,0,1,.5,.3,.5 -tp 2~0,0,1,0 -lt 1
+ -colsy 2:40 -lt {ltb} -qr bnd6.sp2
+ -colsy 2:40 -lt {ltr} -qr bnd6.sp1
+ -font t24 -lblu 0,{ymin-(ymax-ymin)/60} cd Z
+ -frme 0.673,0.798,0,1 -p0 -x 0,1 -y {ymin},{ymax} -noxn -1p -noyn
+ -lt 2,bold=3,col=0,0,0,1,.5,.3,.5 -tp 2~0,0,1,0 -lt 1
+ -colsy 2:41 -lt {ltb} -qr bnd7.sp2
+ -colsy 2:41 -lt {ltr} -qr bnd7.sp1
+ -font t24 -lblu 0,{ymin-(ymax-ymin)/60} cd U
+ -frme 0.798,0.876,0,1 -p0 -x 0,1 -y {ymin},{ymax} -noxn -1p -noyn
+ -lt 2,bold=3,col=0,0,0,1,.5,.3,.5 -tp 2~0,0,1,0 -lt 1
+ -colsy 2:39 -lt {ltb} -qr bnd8.sp2
+ -colsy 2:39 -lt {ltr} -qr bnd8.sp1
+ -font t24 -lblu 0,{ymin-(ymax-ymin)/60} cd T
+ -frme 0.876,1,0,1 -p0 -x 0,1 -y {ymin},{ymax} -noxn -1p -noyn
+ -lt 2,bold=3,col=0,0,0,1,.5,.3,.5 -tp 2~0,0,1,0 -lt 1
+ -colsy 2:39 -lt {ltb} -qr bnd9.sp2
+ -colsy 2:39 -lt {ltr} -qr bnd9.sp1
+ -font t24 -lblu 0,{ymin-(ymax-ymin)/60} cd R
+
+ -font t24 -lblu 1,{ymin-(ymax-ymin)/60} cd Z

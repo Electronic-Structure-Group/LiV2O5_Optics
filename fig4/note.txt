@@ -1,0 +1,2 @@
+The dat are copied from /home/wxl2/vstor/cxg454/lmto/exciton/liv2o5/alpha/afm/afmb/qsgw-sigma-two/qsgwrun/bserun2
+and contain  the .h5 file which contain the band weights for the lowest exciton eigenvalues in the lbse file given in fig3

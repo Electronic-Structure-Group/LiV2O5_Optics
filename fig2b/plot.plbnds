@@ -1,0 +1,45 @@
+%char0 lta=1,bold=2,col=0,1,0
+%char0 ltb="1,bold=2,col=1,0,0"
+fplot
+% var ymin=-8 ymax=8
+ -frme 0,0.063,0,1 -p0 -x 0,1 -y {ymin},{ymax} -noxn -1p -yl 'E (eV)'
+ -lt 2,bold=3,col=0,0,0,1,.5,.3,.5 -tp 2~0,0,1,0 -lt 1
+ -colsy 2:54 -lt {ltb} -qr bnd1.spin2
+ -colsy 2:54 -lt {lta} -qr bnd1.spin1
+ -font s24 -lblu 0,{ymin-(ymax-ymin)/60} cd G
+ -frme 0.063,0.262,0,1 -p0 -x 0,1 -y {ymin},{ymax} -noxn -1p -noyn
+ -lt 2,bold=3,col=0,0,0,1,.5,.3,.5 -tp 2~0,0,1,0 -lt 1
+ -colsy 2:53 -lt {ltb} -qr bnd2.spin2
+ -colsy 2:53 -lt {lta} -qr bnd2.spin1
+ -font t24 -lblu 0,{ymin-(ymax-ymin)/60} cd X
+ -frme 0.262,0.324,0,1 -p0 -x 0,1 -y {ymin},{ymax} -noxn -1p -noyn
+ -lt 2,bold=3,col=0,0,0,1,.5,.3,.5 -tp 2~0,0,1,0 -lt 1
+ -colsy 2:51 -lt {ltb} -qr bnd3.spin2
+ -colsy 2:51 -lt {lta} -qr bnd3.spin1
+ -font t24 -lblu 0,{ymin-(ymax-ymin)/60} cd S
+ -frme 0.324,0.523,0,1 -p0 -x 0,1 -y {ymin},{ymax} -noxn -1p -noyn
+ -lt 2,bold=3,col=0,0,0,1,.5,.3,.5 -tp 2~0,0,1,0 -lt 1
+ -colsy 2:54 -lt {ltb} -qr bnd4.spin2
+ -colsy 2:54 -lt {lta} -qr bnd4.spin1
+ -font t24 -lblu 0,{ymin-(ymax-ymin)/60} cd Y
+ -frme 0.523,0.676,0,1 -p0 -x 0,1 -y {ymin},{ymax} -noxn -1p -noyn
+ -lt 2,bold=3,col=0,0,0,1,.5,.3,.5 -tp 2~0,0,1,0 -lt 1
+ -colsy 2:54 -lt {ltb} -qr bnd5.spin2
+ -colsy 2:54 -lt {lta} -qr bnd5.spin1
+ -font s24 -lblu 0,{ymin-(ymax-ymin)/60} cd G
+ -frme 0.676,0.738,0,1 -p0 -x 0,1 -y {ymin},{ymax} -noxn -1p -noyn
+ -lt 2,bold=3,col=0,0,0,1,.5,.3,.5 -tp 2~0,0,1,0 -lt 1
+ -colsy 2:53 -lt {ltb} -qr bnd6.spin2
+ -colsy 2:53 -lt {lta} -qr bnd6.spin1
+ -font t24 -lblu 0,{ymin-(ymax-ymin)/60} cd Z
+ -frme 0.738,0.937,0,1 -p0 -x 0,1 -y {ymin},{ymax} -noxn -1p -noyn
+ -lt 2,bold=3,col=0,0,0,1,.5,.3,.5 -tp 2~0,0,1,0 -lt 1
+ -colsy 2:53 -lt {ltb} -qr bnd7.spin2
+ -colsy 2:53 -lt {lta} -qr bnd7.spin1
+ -font t24 -lblu 0,{ymin-(ymax-ymin)/60} cd U
+ -frme 0.937,1,0,1 -p0 -x 0,1 -y {ymin},{ymax} -noxn -1p -noyn
+ -lt 2,bold=3,col=0,0,0,1,.5,.3,.5 -tp 2~0,0,1,0 -lt 1
+ -colsy 2:51 -lt {ltb} -qr bnd8.spin2
+ -colsy 2:51 -lt {lta} -qr bnd8.spin1
+ -font t24 -lblu 0,{ymin-(ymax-ymin)/60} cd T
+ -font t24 -lblu 1,{ymin-(ymax-ymin)/60} cd R

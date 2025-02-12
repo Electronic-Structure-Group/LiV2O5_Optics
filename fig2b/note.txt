@@ -1,0 +1,7 @@
+these data were copied from 
+/mnt/vstor/CAS_PHY_WXL2/cxg454/lmto/exciton/liv2o5/alpha/fm/fm-155/2sgm-fm-16/qsgw/qsgw-bnd-fm-3020
+
+and relate to fig.2b
+
+THe figure is  the .ps file and is generated from the bnd*.spin1  and .spin2 files in eV using the plot.plbnds script
+TH raw and more complete data are in bnds.liv2o5 and the other files, ctrl syml, site, sigm rst are metadata for how the bnds file is generated.x

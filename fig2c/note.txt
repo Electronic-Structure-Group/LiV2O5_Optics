@@ -1,0 +1,7 @@
+These data ere copied from 
+~/vstor/cxg454/lmto/exciton/liv2o5/alpha/afm/afmb/qsgw-sigma-two/qsgwrun
+and correspondn to fig. 2 c afm case.
+The postscript version of the figure is the .ps file
+this file is produced by the script plot.plbnds from the bnd*.sp1 and .sp2 files with the particular bands shown in eV
+Thiese are in turn geneated from the nore complete bnds.afm file
+and the other files ctrl.afm, sitex, sigm syml, rst provide metadata for the bnds.afm file 

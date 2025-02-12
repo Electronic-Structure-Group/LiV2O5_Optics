@@ -1,0 +1,4 @@
+Data copied from /home/wxl2/vstor/cxg454/lmto/exciton/liv2o5/alpha/afm/afmb/qsgw-sigma-two/qsgwrun/bserun2
+
+The data for fig.3  are all contained in the .agr xmgrace file an generate  the .pdf figure .
+The raw data, not all shown in the figure are in the eps-plot.txt file

@@ -1,0 +1,7 @@
+Data from
+~/vstor/cxg454/lmto/exciton/v2o5/bulk/qsgw-blk/qsgw-blk-bnd-2020/
+pertaining to fig. 2a bulk v2o5 in qsgw with w-rpa
+The actual figure is the .ps file
+The raw dat for this are in the files bnd*.dat
+which are processed with the plot.plbnds script and extracted from bnds.v2o5 which is produced using lmf --bnd with various options
+THe meta data include the ctrl.v2o5 file, the site, rst and sigm and syml files

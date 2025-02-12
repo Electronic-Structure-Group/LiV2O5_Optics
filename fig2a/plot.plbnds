@@ -1,0 +1,37 @@
+%char0 ltb="1,bold=3,col=0,0,1"
+fplot
+% var ymin=-6 ymax=10
+ -frme 0,0.061,0,1 -p0 -x 0,1 -y {ymin},{ymax} -noxn -1p -yl "Energy (eV)"
+ -lt 2,bold=3,col=0,0,0,1,.5,.3,.5 -tp 2~0,0,1,0 -lt 1
+ -colsy 2:53 -lt {ltb} -qr bnd1.dat
+ -font s24 -lblu 0,{ymin-(ymax-ymin)/60} cd G
+ -frme 0.061,0.259,0,1 -p0 -x 0,1 -y {ymin},{ymax} -noxn -1p -noyn
+ -lt 2,bold=3,col=0,0,0,1,.5,.3,.5 -tp 2~0,0,1,0 -lt 1
+ -colsy 2:53 -lt {ltb} -qr bnd2.dat
+ -font t24 -lblu 0,{ymin-(ymax-ymin)/60} cd X
+ -frme 0.259,0.32,0,1 -p0 -x 0,1 -y {ymin},{ymax} -noxn -1p -noyn
+ -lt 2,bold=3,col=0,0,0,1,.5,.3,.5 -tp 2~0,0,1,0 -lt 1
+ -colsy 2:51 -lt {ltb} -qr bnd3.dat
+ -font t24 -lblu 0,{ymin-(ymax-ymin)/60} cd S
+ -frme 0.32,0.518,0,1 -p0 -x 0,1 -y {ymin},{ymax} -noxn -1p -noyn
+ -lt 2,bold=3,col=0,0,0,1,.5,.3,.5 -tp 2~0,0,1,0 -lt 1
+ -colsy 2:52 -lt {ltb} -qr bnd4.dat
+ -font t24 -lblu 0,{ymin-(ymax-ymin)/60} cd Y
+ -frme 0.518,0.68,0,1 -p0 -x 0,1 -y {ymin},{ymax} -noxn -1p -noyn
+ -lt 2,bold=3,col=0,0,0,1,.5,.3,.5 -tp 2~0,0,1,0 -lt 1
+ -colsy 2:52 -lt {ltb} -qr bnd5.dat
+ -font s24 -lblu 0,{ymin-(ymax-ymin)/60} cd G
+ -frme 0.68,0.741,0,1 -p0 -x 0,1 -y {ymin},{ymax} -noxn -1p -noyn
+ -lt 2,bold=3,col=0,0,0,1,.5,.3,.5 -tp 2~0,0,1,0 -lt 1
+ -colsy 2:51 -lt {ltb} -qr bnd6.dat
+ -font t24 -lblu 0,{ymin-(ymax-ymin)/60} cd Z
+ -frme 0.741,0.939,0,1 -p0 -x 0,1 -y {ymin},{ymax} -noxn -1p -noyn
+ -lt 2,bold=3,col=0,0,0,1,.5,.3,.5 -tp 2~0,0,1,0 -lt 1
+ -colsy 2:51 -lt {ltb} -qr bnd7.dat
+ -font t24 -lblu 0,{ymin-(ymax-ymin)/60} cd U
+ -frme 0.939,1,0,1 -p0 -x 0,1 -y {ymin},{ymax} -noxn -1p -noyn
+ -lt 2,bold=3,col=0,0,0,1,.5,.3,.5 -tp 2~0,0,1,0 -lt 1
+ -colsy 2:51 -lt {ltb} -qr bnd8.dat
+ -font t24 -lblu 0,{ymin-(ymax-ymin)/60} cd T
+
+ -font t24 -lblu 1,{ymin-(ymax-ymin)/60} cd R

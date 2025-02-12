@@ -1,0 +1,3 @@
+The data here are from 
+/home/wxl2/vstor/cxg454/lmto/exciton/liv2o5/alpha/afm/afmb/qsgw-sigma-two/qsgwrun/bserun2
+and include  the .xsf file and processed .vesta
