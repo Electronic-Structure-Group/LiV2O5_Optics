@@ -1,0 +1,41 @@
+#!/bin/bash
+#SBATCH --mail-user=cxg454@case.edu
+#SBATCH --mail-type=ALL
+#SBATCH --time 1:00:00
+#SBATCH --exclusive
+#SBATCH -N 2
+#SBATCH -n 80
+#SBATCH --mem=0
+#SBATCH -J xtn
+
+cp -r * $PFSDIR
+#cd $PFSDIR
+
+# type of exciton
+xtn=brt
+ext=liv2o5
+
+bsc="env OMP_NUM_THREADS=40 srun -n 1 bse --optdfl=optdatac.h5 --tmesh=0x40 ctrl.${ext}"
+
+# bright/dark  exciton
+e="1.70,1.85"
+
+$bsc --wexbw~ewin=${e}eV~fn=exbw-${e/,/-}.h5 > out.${e/,/-}-${xtn}
+
+m1="env OMP_NUM_THREADS=40 MKL_NUM_THREADS=40  srun -n 1"
+mn="env OMP_NUM_THREADS=10 MKL_NUM_THREADS=10  srun -n 8"
+
+$mn  lmf  ctrl.${ext}   --quit=rho  &>  out.rho-${e/,/-}-${xtn}
+$mn  lmf  ctrl.${ext}   --band~fn=syml  &>  out.bnd-${e/,/-}-${xtn}
+
+cp bnds.${ext}  bnds.${ext}-${e/,/-}
+
+#  PLOTTING WITH ALL BLUE COLOR
+band-plot-new  syml.${ext}  bnds.${ext}  -f -u eV -e -4,8  --exbw  exbw-${e/,/-}.h5  -o  bnds-exbw-${e/,/-}-${xtn}.pdf  --xfontsize 18  --exbw-col  '#00FFFF'
+
+# USE THIS TO PLOT THE BAND WITHOUT THE ALL BLUE COLOR
+#band-plot  syml.${ext}  bnds.${ext}  -f -u eV -e -4,8  --exbw  exbw-${e/,/-}.h5  -o  bnds-exbw-${e/,/-}-${xtn}.pdf 
+
+#cp $PFSDIR/* $SLURM_SUBMIT_DIR -r
+
+rm -rf "$PFSDIR"/

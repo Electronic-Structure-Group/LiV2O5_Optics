@@ -1,0 +1,1 @@
+datafiles from /mnt/vstor/CAS_PHY_WXL2/cxg454/lmto/exciton/liv2o5/alpha/afm/afm-155/pmmn-32w/2sgm-pmmn-32/qsgw-pmmn-32/qsgw-pmmn-32-bse
