@@ -1,0 +1,50 @@
+#!/bin/bash
+#SBATCH --mail-user=wxl2@case.edu
+#SBATCH --mail-type=ALL
+#SBATCH -A PDS0145
+#SBATCH --time=24:00:00
+#SBATCH --exclusive
+#SBATCH --nodes=1
+#SBATCH --gres=gpu:4
+#SBATCH --ntasks-per-node=96 
+#SBATCH -J qsgw
+#SBATCH -o %x-%j.log
+
+##############################################################
+#####           qsgw from LDA+U
+##############################################################
+
+#[[ -z "${SLURM_JOBID}" ]] || scontrol show job ${SLURM_JOBID}
+
+module use /users/PDS0145/dmt/opt/m
+module load qlm/241021-6a4a68b7/intel/2024.2.1/intelmpi/2024.2.1
+#module load qlm/241022-b83c6a41/intel/2024.2.1/intelmpi/2024.2.1
+
+module -t list
+
+#export PATH=$HOME/cardinal/opt/bin:$PATH
+which lmf
+
+
+ulimit -c 0
+ulimit -s unlimited
+
+set -e 
+set -x 
+
+mkdir bserun
+cp job-bse GWinput ctrl.afm basp.afm  sigm.afm  sitex.afm rst.afm switches-for-lm bserun
+cp -r meta bserun
+cd bserun
+
+m1="env OMP_NUM_THREADS=96 MKL_NUM_THREADS=96 mpirun  -n 1 -ppn 1"
+mn="env OMP_NUM_THREADS=24 MKL_NUM_THREADS=24 mpirun -n 4 -ppn 4"
+mb="env OMP_NUM_THREADS=24 MKL_NUM_THREADS=24 mpirun -n 4 -ppn=4"
+
+lmgw.sh --bse --mpirun-1 "$m1" --mpirun-n "$mn" --cmd-bs "$mb" --bse-flags="--tmesh=1x24"  ctrl.afm  &>bse.log
+
+
+#rsync -rvs . $SLURM_SUBMIT_DIR/qsgw
+
+
+
