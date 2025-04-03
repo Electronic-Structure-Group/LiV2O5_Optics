@@ -1,4 +1,4 @@
 The data for liv2o5 are taken from
 cwr033@cardinal.osc.edu:/users/PDS0145/cwr033/lmto/liv2o5/qsgw1/qsgw/bserun1/eps-plot.txt
-the daa for v2o5are from hpc at cwru
+the daa for v2o5 are from hpc at cwru
 /home/wxl2/vstor/cxg454/lmto/exciton/v2o5/bulk/qsgw-blk/qsgw-blk-die
